@@ -58,3 +58,5 @@ typings/
 .env
 
 bin
+dist
+package-lock.json
