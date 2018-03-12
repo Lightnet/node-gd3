@@ -1,0 +1,43 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "gulp",
+            "task": "default",
+            "problemMatcher": []
+        },
+        {
+            "label": "Godot Build Compile Release",
+            "type":"shell",
+            "command": "\"./build app 64bit.bat\"",
+            "args": [
+                ""
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "Godot Export Javascript",
+            "command": "C:\\godot3\\bin\\godot.windows.tools.64.exe -export 'Web'  ${workspaceRoot}\\godot3_app",
+            "args": [
+                ""
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "Launch Application Release",
+            "command": "${workspaceRoot}/${config:output_dir}/${config:development_mode}/${config:output_program}.exe",
+            "args": [
+                ""
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        }
+    ]
+}
